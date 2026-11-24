@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>
+        Sorting Visualizer
+    </h1>
+    <div class="container">
+
+        <div class="sidebar">
+            <h3>Controls</h3>
+
+            <div class="size-control" id="range">
+                <label for="array-size">ARRAY SIZE</label>
+                <input id="array-size" type="range" min="5" max="50" value="10" step="1">
+                <div class="size-label">
+                    <span>5</span>
+                    <span>50</span>
+                </div>
+                <div class="new-array">
+                    <button class="btn" id="new-array">Generate Array</button>
+
+                </div>
+                <p id="array-items"></p>
+            </div>
+
+            
+            <div class="sort-buttons">
+                <p>ALGORITHM</p>
+                <div class="sorting-options">
+                    <select name="algorithm" id="algo" class="options">
+                        <option value="">Select Algorithm</option>
+                        <option value="bubble">Bubble</option>
+                        <option value="selection">Selection</option>
+                        <option value="insertion">Insertion</option>
+                    </select>
+                </div>
+            </div>
+
+            
+
+            
+            <div class="speed-bar" id="speed-bar">
+                <label for="speed">SPEED</label>
+                <input id="speed" type="range" min="0" max="2" step="1">
+                <div class="speed-label">
+                    <span>Slow</span>
+                    <span>Med</span>
+                    <span>Fast</span>
+                </div>
+            </div>
+            
+            <button class="btn reset-btn" id="reset">Reset</button>
+            <button class="btn" id="sort">Start Sorting</button>
+           
+            <div class="output">
+                <label for="comparisons">Comparisons: <span id="comparisons" class="sort-result">0</span></label><br>
+                <label for="comparisons">Operations: <span id="operations" class="sort-result">0</span></label>
+            </div>
+            
+        </div>
+
+
+        <div class="visualizer">
+            <h3>Visualization</h3>
+            <div class="bars-container" id="bars-container"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
